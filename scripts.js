@@ -1,5 +1,5 @@
 // Customize these:
-const INVITE_LINK = "https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=8&scope=bot%20applications.commands";
+const INVITE_LINK = "https://discord.com/oauth2/authorize?client_id=1433875801496879224";
 const WIDGET_SRC = ""; // optional: "https://discord.com/widget?id=SERVER_ID&theme=dark"
 
 document.addEventListener('DOMContentLoaded', () => {
