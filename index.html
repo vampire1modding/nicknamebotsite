@@ -1,112 +1,102 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nickname Bot XYZ — Discord nickname manager</title>
-  <meta name="description" content="Nickname Bot XYZ — advanced nickname & role manager for Discord." />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/logo.png" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nickname Management Bot | .gg/gmrp25</title>
+<link href="css/style.css" rel="stylesheet">
 </head>
-<body class="dark">
-  <!-- NAV -->
-  <header class="nav">
-    <div class="container nav-inner">
-      <div class="brand">
-        <img src="assets/logo.png" alt="Nickname Bot XYZ" class="logo"/>
-        <span class="brand-title">Nickname Bot XYZ</span>
-      </div>
-      <nav class="main-nav">
-        <a href="#features">Features</a>
-        <a href="#invite">Invite</a>
-        <a href="#support">Support</a>
-        <a href="terms.html">Terms</a>
-        <a href="privacy.html">Privacy</a>
-      </nav>
-      <div class="actions">
-        <a href="dashboard.html" class="btn btn-primary">Staff Dashboard</a>
-      </div>
+<body class="bg-gray-900 text-white font-sans">
+
+<!-- NAVBAR -->
+<nav class="bg-gray-800 p-4 flex justify-between items-center">
+  <a href="index.html" class="font-bold text-xl">Nickname Management</a>
+  <div class="space-x-4">
+    <a href="#features" class="hover:text-purple-400">Features</a>
+    <a href="#commands" class="hover:text-purple-400">Commands</a>
+    <a href="dashboard.html" class="hover:text-purple-400">Staff Dashboard</a>
+    <a href="#stats" class="hover:text-purple-400">Stats</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="text-center py-24 bg-gradient-to-r from-purple-700 to-indigo-600">
+  <h1 class="text-6xl font-bold mb-4">Nickname Management</h1>
+  <p class="text-xl mb-8">The ultimate Discord bot for advanced nickname control & management.</p>
+  <div class="space-x-4">
+    <a href="https://discord.com/oauth2/authorize?client_id=YOUR_BOT_ID&scope=bot+applications.commands" 
+       class="px-6 py-3 bg-green-500 rounded-lg font-bold hover:bg-green-600 transition">Invite Bot</a>
+    <a href="https://discord.gg/gmrp25" 
+       class="px-6 py-3 bg-blue-500 rounded-lg font-bold hover:bg-blue-600 transition">Join Server</a>
+  </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section id="features" class="py-24 px-8 max-w-6xl mx-auto">
+  <h2 class="text-4xl font-bold text-center mb-12">Features</h2>
+  <div class="grid md:grid-cols-3 gap-8">
+    <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+      <h3 class="text-2xl font-bold mb-2">Automatic Nickname Assignment</h3>
+      <p>Set nicknames automatically based on roles, join date, or custom rules.</p>
     </div>
-  </header>
-
-  <!-- HERO -->
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <h1>Powerful nickname & role automation for Discord</h1>
-          <p class="lead">Manage nicknames by role, keep order automatically, and customize behavior with easy commands.</p>
-          <div class="hero-cta">
-            <a href="#" class="btn btn-primary">Invite Bot</a>
-          </div>
-          <div class="stats">
-            <div><strong>150k+</strong><span>Servers ready</span></div>
-            <div><strong>2M+</strong><span>Nickname changes</span></div>
-            <div><strong>99.99%</strong><span>Uptime</span></div>
-          </div>
-        </div>
-        <div class="hero-image">
-          <img src="assets/1527367458_2534724415_1761840863535.png" alt="Banner" />
-        </div>
-      </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section id="features" class="section container">
-      <h2 class="section-title">Features</h2>
-      <div class="grid features-grid">
-        <article class="feature">
-          <div class="icon">🛡️</div>
-          <h3>Protection</h3>
-          <p>Auto unmute/undeafen for protected users, reconnect protection, and audit logs notifications.</p>
-        </article>
-
-        <article class="feature">
-          <div class="icon">🤖</div>
-          <h3>Automated Nicknames</h3>
-          <p>Prefix-based nicknames per role — automatically applied on role assignment.</p>
-        </article>
-
-        <article class="feature">
-          <div class="icon">⚙️</div>
-          <h3>Configurable</h3>
-          <p>Fine-grained permissions, server owner controls, and JSON-based persistence.</p>
-        </article>
-
-        <article class="feature">
-          <div class="icon">📊</div>
-          <h3>Logs & Metrics</h3>
-          <p>Action logs, mod logs, and usage statistics for transparency and safety.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- INVITE -->
-    <section id="invite" class="section container cta">
-      <h2>Invite Nickname Bot XYZ</h2>
-      <p>Add the bot to your server and start automating nicknames today.</p>
-      <a class="btn btn-primary" href="#">Invite Bot</a>
-    </section>
-
-    <!-- SUPPORT -->
-    <section id="support" class="section container">
-      <h2>Support & Community</h2>
-      <p>Need help? Join our Discord or email <a href="mailto:greatermanchesterrpleadership@gmail.com">greatermanchesterrpleadership@gmail.com</a>.</p>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="left">
-        <img src="assets/logo.png" alt="logo" class="logo-small" />
-        <div class="muted">© 2025 Nickname Bot XYZ</div>
-      </div>
-      <div class="right">
-        <a href="terms.html">Terms</a>
-        <a href="privacy.html">Privacy</a>
-      </div>
+    <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+      <h3 class="text-2xl font-bold mb-2">Nickname History & Logs</h3>
+      <p>Keep track of every nickname change with detailed logs for moderation purposes.</p>
     </div>
-  </footer>
+    <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+      <h3 class="text-2xl font-bold mb-2">Custom Commands</h3>
+      <p>Allow admins to create nickname commands that apply dynamically to users or roles.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMMANDS SECTION -->
+<section id="commands" class="py-24 bg-gray-800 px-8 max-w-6xl mx-auto rounded-xl">
+  <h2 class="text-4xl font-bold text-center mb-12">Commands</h2>
+  <div class="grid md:grid-cols-2 gap-8">
+    <div class="bg-gray-700 p-6 rounded-xl">
+      <h3 class="font-bold text-2xl mb-2">!setnickname [user] [nickname]</h3>
+      <p>Instantly sets a user's nickname. Works with role hierarchy.</p>
+    </div>
+    <div class="bg-gray-700 p-6 rounded-xl">
+      <h3 class="font-bold text-2xl mb-2">!resetnickname [user]</h3>
+      <p>Resets a user's nickname to their default username.</p>
+    </div>
+    <div class="bg-gray-700 p-6 rounded-xl">
+      <h3 class="font-bold text-2xl mb-2">!nicklog [user]</h3>
+      <p>Shows nickname change history for a specific user.</p>
+    </div>
+    <div class="bg-gray-700 p-6 rounded-xl">
+      <h3 class="font-bold text-2xl mb-2">!autorole [role]</h3>
+      <p>Automatically assigns nicknames based on role.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats" class="py-24 bg-gradient-to-r from-purple-700 to-indigo-600 text-center">
+  <h2 class="text-4xl font-bold mb-8">Bot Stats</h2>
+  <div class="flex justify-center gap-16 flex-wrap">
+    <div>
+      <p class="text-5xl font-bold">12k+</p>
+      <p>Users</p>
+    </div>
+    <div>
+      <p class="text-5xl font-bold">150+</p>
+      <p>Servers</p>
+    </div>
+    <div>
+      <p class="text-5xl font-bold">99.9%</p>
+      <p>Uptime</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-12 bg-gray-900 text-center text-gray-400">
+  <p>© 2025 Nickname Management Bot | <a href="https://github.com/" class="underline hover:text-white">GitHub</a></p>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
