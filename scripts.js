@@ -1,6 +1,6 @@
 // Customize these:
 const INVITE_LINK = "https://discord.com/oauth2/authorize?client_id=1433875801496879224";
-const WIDGET_SRC = "<iframe src="https://discord.com/widget?id=1415841829680840797&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>";
+const WIDGET_SRC = <iframe src="https://discord.com/widget?id=1415841829680840797&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>;
 
 document.addEventListener('DOMContentLoaded', () => {
   // wire invite buttons
