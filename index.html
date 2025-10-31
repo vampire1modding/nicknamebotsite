@@ -1,40 +1,243 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nickname Bot XYZ</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nickname Bot XYZ — Discord nickname manager</title>
+  <meta name="description" content="Nickname Bot XYZ — advanced nickname & role manager for Discord." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png" />
 </head>
-<body>
-  <header>
-    <h1>Nickname Bot XYZ</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="privacy.html">Privacy Policy</a>
-    </nav>
+<body class="dark">
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <img src="assets/logo-white.png" alt="Nickname Bot XYZ" class="logo"/>
+        <span class="brand-title">Nickname Bot XYZ</span>
+      </div>
+      <nav class="main-nav">
+        <a href="#features">Features</a>
+        <a href="#commands">Commands</a>
+        <a href="#pricing">Invite</a>
+        <a href="#support">Support</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <div class="actions">
+        <button id="inviteBtn" class="btn btn-ghost" data-invite>Invite</button>
+        <button id="discordBtn" class="btn btn-primary" onclick="openModal('supportModal')">Join Server</button>
+        <button id="toggleTheme" class="icon-btn" aria-label="Toggle theme">🌙</button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+    <!-- mobile nav -->
+    <div id="mobileMenu" class="mobile-menu">
+      <a href="#features">Features</a>
+      <a href="#commands">Commands</a>
+      <a href="#pricing">Invite</a>
+      <a href="#support">Support</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
   </header>
 
+  <!-- HERO -->
   <main>
     <section class="hero">
-      <h2>Welcome to Nickname Bot XYZ</h2>
-      <p>Your go-to Discord nickname manager bot.</p>
-      <a href="#" class="btn">Invite Bot</a>
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Powerful nickname & role automation for Discord</h1>
+          <p class="lead">Manage nicknames by role, keep order automatically, and customize behavior with easy commands.</p>
+          <div class="hero-cta">
+            <a href="#" class="btn btn-primary" id="inviteLink">Invite Bot</a>
+            <a href="#features" class="btn btn-ghost">Explore Features</a>
+            <button class="btn subtle" onclick="copyInvite()">Copy Invite Link</button>
+          </div>
+
+          <div class="stats">
+            <div><strong>150k+</strong><span>Servers ready</span></div>
+            <div><strong>2M+</strong><span>Nickname changes</span></div>
+            <div><strong>99.99%</strong><span>Uptime</span></div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="card-surface">
+            <div class="card-header">
+              <div>
+                <strong>Bot status</strong>
+                <div class="muted">Online — v1.4.0</div>
+              </div>
+              <div class="pill">Connected</div>
+            </div>
+
+            <div class="card-body">
+              <div class="small">Quick Commands</div>
+              <ul class="quick-commands">
+                <li><code>/setprefix &lt;prefix&gt;</code> — Set command prefix</li>
+                <li><code>/setautorole &lt;role&gt;</code> — Enable autorole</li>
+                <li><code>/protect &lt;user&gt;</code> — Protect user from mute</li>
+              </ul>
+            </div>
+
+            <div class="card-footer">
+              <a href="#commands" class="link">View more commands →</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="info">
-      <h3>Features</h3>
-      <ul>
-        <li>Automatic nickname management</li>
-        <li>Role-based permissions</li>
-        <li>Easy setup for your server</li>
-      </ul>
+    <!-- FEATURES -->
+    <section id="features" class="section container">
+      <h2 class="section-title">Features</h2>
+      <div class="grid features-grid">
+        <article class="feature">
+          <div class="icon">🛡️</div>
+          <h3>Protection</h3>
+          <p>Auto unmute/undeafen for protected users, reconnect protection, and audit logs notifications.</p>
+        </article>
+
+        <article class="feature">
+          <div class="icon">🤖</div>
+          <h3>Automated Nicknames</h3>
+          <p>Prefix-based nicknames per role — automatically applied on role assignment.</p>
+        </article>
+
+        <article class="feature">
+          <div class="icon">⚙️</div>
+          <h3>Configurable</h3>
+          <p>Fine-grained permissions, server owner controls, and JSON-based persistence.</p>
+        </article>
+
+        <article class="feature">
+          <div class="icon">📊</div>
+          <h3>Logs & Metrics</h3>
+          <p>Action logs, mod logs, and usage statistics for transparency and safety.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMMANDS -->
+    <section id="commands" class="section container">
+      <h2 class="section-title">Popular Commands</h2>
+      <div class="commands-grid">
+        <div class="command">
+          <div class="cmd">/setautorole &lt;role&gt;</div>
+          <p>Automatically assign roles to new members.</p>
+        </div>
+        <div class="command">
+          <div class="cmd">/protect &lt;user&gt;</div>
+          <p>Protect user from server mute/deafen/disconnect actions.</p>
+        </div>
+        <div class="command">
+          <div class="cmd">/claim ticket</div>
+          <p>Claim an open support ticket.</p>
+        </div>
+        <div class="command">
+          <div class="cmd">/play &lt;file&gt;</div>
+          <p>Play an audio file in a voice channel (slash command).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INVITE / CTA -->
+    <section id="pricing" class="section cta container">
+      <div class="cta-grid">
+        <div>
+          <h2>Invite Nickname Bot XYZ</h2>
+          <p class="muted">Add the bot to your server and start automating nicknames today.</p>
+        </div>
+        <div class="cta-actions">
+          <a id="inviteBtnMain" class="btn btn-primary" href="#" target="_blank">Invite Bot</a>
+          <a class="btn btn-ghost" href="#">Dashboard (Coming soon)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISCORD WIDGET + SUPPORT -->
+    <section id="support" class="section container">
+      <h2 class="section-title">Support & Community</h2>
+      <div class="support-grid">
+        <div class="widget-card">
+          <h3>Discord Server</h3>
+          <!-- Placeholder: replace SRC with your widget URL if enabled in your server -->
+          <div class="discord-embed">
+            <!-- Example: <iframe src="https://discord.com/widget?id=SERVER_ID&theme=dark" allowtransparency="true"></iframe> -->
+            <div class="placeholder">Discord widget goes here — enable server widget and replace iframe src.</div>
+          </div>
+        </div>
+
+        <div class="support-card">
+          <h3>Contact & Support</h3>
+          <p>Need help? Open a ticket in our Discord or email <a href="mailto:hello@nicknamebotxyz.co.uk">hello@nicknamebotxyz.co.uk</a></p>
+          <button class="btn" onclick="openModal('supportModal')">Open Support</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="section container">
+      <h2 class="section-title">Team</h2>
+      <div class="team-grid">
+        <div class="member">
+          <img src="assets/person-1.jpg" alt="Owner" />
+          <h4>Emrys</h4>
+          <p>Founder & Lead Dev</p>
+        </div>
+        <div class="member">
+          <img src="assets/person-2.jpg" alt="Co Dev" />
+          <h4>Cheddar</h4>
+          <p>Ops & Support</p>
+        </div>
+        <div class="member">
+          <img src="assets/person-3.jpg" alt="Designer" />
+          <h4>Contributor</h4>
+          <p>UX & Design</p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Nickname Bot XYZ. All rights reserved.</p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="left">
+        <img src="assets/logo-white.png" alt="logo" class="logo-small" />
+        <div class="muted">© 2025 Nickname Bot XYZ</div>
+      </div>
+      <div class="right">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="#" onclick="openModal('supportModal')">Contact</a>
+      </div>
+    </div>
   </footer>
+
+  <!-- SUPPORT MODAL -->
+  <div id="supportModal" class="modal" aria-hidden="true">
+    <div class="modal-panel">
+      <button class="modal-close" onclick="closeModal('supportModal')">✕</button>
+      <h3>Contact Support</h3>
+      <p>Open a ticket on Discord or email us.</p>
+      <form id="supportForm" onsubmit="submitSupport(event)">
+        <label>
+          Your email
+          <input name="email" type="email" required />
+        </label>
+        <label>
+          Message
+          <textarea name="message" required></textarea>
+        </label>
+        <div class="modal-actions">
+          <button type="submit" class="btn btn-primary">Send</button>
+          <button type="button" class="btn btn-ghost" onclick="closeModal('supportModal')">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
