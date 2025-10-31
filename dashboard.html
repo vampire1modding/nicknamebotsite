@@ -1,54 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Staff Dashboard — GMRP Bot</title>
-<link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Staff Dashboard | Nickname Management Bot</title>
+<link href="css/style.css" rel="stylesheet">
 </head>
-<body class="dark">
-  <main class="dashboard">
-    <section id="loginSection" class="container">
-      <h1>Staff Login</h1>
-      <form id="loginForm">
-        <label>Username: <input type="text" id="username" required /></label>
-        <label>Password: <input type="password" id="password" required /></label>
-        <button type="submit" class="btn btn-primary">Login</button>
-        <div id="loginError" class="error"></div>
-      </form>
-    </section>
+<body class="bg-gray-900 text-white font-sans">
 
-    <section id="dashboardSection" class="container hidden">
-      <h1>GMRP Bot Dashboard</h1>
-      <div class="dashboard-cards">
-        <div class="card">
-          <h3>Total Servers</h3>
-          <p id="totalServers">—</p>
-        </div>
-        <div class="card">
-          <h3>Total Members</h3>
-          <p id="totalMembers">—</p>
-        </div>
-        <div class="card">
-          <h3>Active Tickets</h3>
-          <p id="activeTickets">—</p>
-        </div>
-        <div class="card">
-          <h3>Bot Status</h3>
-          <p id="botStatus">Online</p>
-        </div>
-      </div>
+<!-- DASHBOARD HERO -->
+<section class="text-center py-24 bg-gradient-to-r from-indigo-700 to-purple-700">
+  <h1 class="text-5xl font-bold mb-4">Staff Dashboard</h1>
+  <p class="text-lg mb-8">Login with Discord to manage bot features for your server.</p>
+  <a id="discordLogin" href="https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=token&scope=identify%20guilds" 
+     class="px-6 py-3 bg-indigo-500 rounded-lg font-bold hover:bg-indigo-600 transition">Login with Discord</a>
+</section>
 
-      <div class="bot-control">
-        <h2>Limited Bot Control</h2>
-        <button class="btn" onclick="alert('Command sent!')">Send Announcement</button>
-        <button class="btn" onclick="alert('Command sent!')">Clear Tickets</button>
-      </div>
+<section id="dashboardContent" class="hidden py-12 px-8 max-w-6xl mx-auto">
+  <h2 class="text-3xl font-bold mb-6">Welcome, <span id="username"></span></h2>
+  <p class="mb-4">Manage nicknames, view logs, and configure auto-roles here.</p>
+  <div class="grid md:grid-cols-2 gap-8">
+    <button class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded">Set Nickname</button>
+    <button class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded">Reset Nickname</button>
+    <button class="bg-yellow-500 hover:bg-yellow-600 px-4 py-2 rounded">View Logs</button>
+    <button class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded">Auto Roles</button>
+  </div>
+</section>
 
-      <button class="btn btn-ghost" onclick="logout()">Logout</button>
-    </section>
-  </main>
-
-<script src="dashboard.js"></script>
+<script src="js/dashboard.js"></script>
 </body>
 </html>
