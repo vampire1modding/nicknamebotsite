@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Staff Dashboard - GMRP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+
+  <div class="dashboard-container" id="loginContainer">
+    <h1>Staff Dashboard Login</h1>
+    <form id="loginForm">
+      <label>Username:</label>
+      <input type="text" id="username" required>
+      <label>Password:</label>
+      <input type="password" id="password" required>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <p id="errorMsg" class="error"></p>
+  </div>
+
+  <div class="dashboard" id="dashboard" style="display:none;">
+    <h1>Welcome, GMRP Staff</h1>
+    <p>You are logged in as staff. Use the tools below.</p>
+
+    <div class="dash-grid">
+      <div class="dash-card">
+        <h3>Server Stats</h3>
+        <ul>
+          <li>Active Servers: 24</li>
+          <li>Users Managed: 1,520</li>
+          <li>Commands Processed: 28,042</li>
+        </ul>
+      </div>
+
+      <div class="dash-card">
+        <h3>Recent Activity</h3>
+        <p>- User “Alpha#4321” updated nickname<br>
+           - Ticket #213 claimed by “Cheddar”<br>
+           - New department linked: GMRP Support</p>
+      </div>
+
+      <div class="dash-card">
+        <h3>Staff Tools</h3>
+        <button class="btn">Manage Servers</button>
+        <button class="btn">Review Logs</button>
+        <button class="btn">Announcements</button>
+      </div>
+    </div>
+
+    <button class="btn btn-ghost" onclick="logout()">Logout</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
